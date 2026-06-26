@@ -4,7 +4,7 @@
   "description": "AWS Amplify Backend for AI Trials",
   "main": "index.js",
   "scripts": {
-    "dev": "npx ampx sandbox --identifier <unique-identifier",
+    "dev": "npx dotenvx run --env-file .env -- ampx sandbox --identifier <unique-identifier>",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "exports": {
@@ -15,13 +15,16 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@aws-lambda-powertools/logger": "^2.33.1",
     "@dotenvx/dotenvx": "^1.57.1",
     "aws-amplify": "^6.16.3"
   },
   "devDependencies": {
     "@aws-amplify/backend": "^1.21.1",
     "@aws-amplify/backend-cli": "^1.8.2",
+    "@types/node": "^20.19.43",
     "aws-cdk-lib": "^2.244.0",
+    "constructs": "^10.6.0",
     "tsx": "^4.21.0",
     "typescript": "^5.9.2"
   }
